@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-btn-font: "Inter", sans-serif;
+  --regular-font: "Oswald", sans-serif;
+  --bg-color: #B2A4FF;
+  --text-color: #000000;
+  --button-color: #FFDEB4;
+  --other-color: #FDF7C3;
+  --header-color: #FFB4B4;
+  /* https://colorhunt.co/palette/b2a4ffffb4b4ffdeb4fdf7c3 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--regular-font);
+}
+
+h1{
+    font-family: var(--header-btn-font);
+}
+
+.container {
+  min-height: 100svh;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* min-height: clamp(50%, 100%, 100vh); */
+  /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+  grid-template: 1fr 7fr / 2fr 7fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+.sidebar {
+  background-color: var(--button-color);
+  grid-area: sidebar;
+}
+
+.dashboard{
+    display: grid;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font: bold 700;
+    margin-left: 2rem;
+    row-gap: 1rem;
+}
+
+.labels{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    /* max-height:auto; */
+    /* width: 100%; */
+}
+
+.labels > img{
+    width: 15%;
+    height: auto;
+}
+
+.header {
+  background-color: var(--other-color);
+  grid-area: header;
+  font-size: 40px;
+}
+
+.main-content {
+  /* grid-column-start: 2; */
+  background-color: var(--bg-color);
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+}
+
+.project-holder {
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1px; */
+  overflow: auto;
+/* column-gap: 1px; */
+}
+
+.my-project {
+  display: inline-block;
+  flex-basis: calc(100% / 2);
+  height: auto;
+  width: auto;
+  background-color: var(--header-color);
+  border: 2px solid black;
+
+}
+
+.other{
+    display: grid;
+    grid-template-rows: 5fr 5fr;
+}
+
+.announcement{
+    /* background-color: aliceblue; */
+}
+
+.trending{
+    /* background-color:blanchedalmond; */
+}

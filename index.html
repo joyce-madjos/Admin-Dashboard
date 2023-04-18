@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Dashboard</h1>
+            <div class="dashboard">
+                <div class="labels home">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2ElEQVR4nO2UawrCMBCEcwoVr9jeSUhL/wlO6VHE6mlGVmyJ0kbzqgWzsBAadufLUEapXAF11NxIq19Ud+AONS/Scl5UHA23bcVzW5PSqHk7Ndwv9/KK/UO4Ym+ekzuB15df5dXyDwzfkjqBCfHhLjkELOLJIfCFeDIIOIhHh4CHeDQIBIgHQyCCuDdEZ4SMdIxgkR1jYtrCCm/xKq0ilblz1glolgOlDcBcNtW2mTG2Ncs50sK0LDbAc3fxwTA1Drjc+cxkgOxAdmD9DrgEjs/MegFy/VXdAXvTGBQBTU2CAAAAAElFTkSuQmCC">          
+                    <span>Home</span>      
+                </div>
+                <div class="labels profile">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEAElEQVR4nO2aTYhcRRDHK4lGoqKXqJiT3wa8iMaP4AfkoqI3PyDGgysEc4pGcxDxMCoaEE8e96SZqt7Jvhh93bMueND1YPQmeDFB9JCYJfgBbhJdFZS/1GQGdvr1yszOezP9pH/QMLw3XdVdXV2vqt8jSiQSiUQikUgkKscxbrOC16xgwTKOWcFvncY45hif6j39D/2fALCuzXjcCY47AQZpHYM08Zj2pTpjm7jWMr4YdOKBdvTDFq6hOmIF9zjBjyNMvtd+yQU7qE7kgvsd46+Aa//pGK3cYGfOuPnjJi7Rpr/1mmUcCvXTa23GfVQjt/85sJKzg7iz9neMLGC8n6LfDgDWFfY84++c8fywsixjn/b1ZH1OMWMNnvBXbi2T7+EYLxY8QfAoxbr6rviomx1VrhUc9gzwDcXInMHtfuCaM7huVLm67zvBc4XsOcGtFBtWs7h+A7TKkq2e5HlWg2LDChb69r7BzrJkO8EuzwCfUGxYxrd9e7WJG8qSrXmCZ4DjFBuOcW7lILMMl5YlW2V52+scxYYV/FGVAeYZl3kGWKbYsILTKwf50UHcVNkWYCxSbFjGZ17q+mRZstsGT9UhCL7tGeBQZY9BxlsUG87gXj8R+qCF60sqrvoSIcu4m2Kj0cD6QirMyEaVawXv+6lwtCdFVjAVKGP3jSBvf0De0xQrjfNe8KVfDjvBC2uqBP1yWHBUdVDM5PrIYiwFytjDgxRH+h/f7bvt17bBjVQH2gYP+oGrFxi7EX2XM9iqyVInyzPY2s33Z4NHaZpkMR6gOtFWIwjOBFZyqNaRUbfJ93AG24OHnIM27WuwnepGluFyy3i1LA9QWVoPUB3IBTus4IdRJx4wxGnbxEMU9SOQccAJ/lnFnZcsQxxjt2PcMZ/hiulpXKhNf+s1vWcZ5j88R2W/GV0ilGXY4ATvBVfu/EvQqSzDpiHkbXJNPLPq+0TGu6qTIkp+ZgODXNYscGEBF6xVtvbtJkTLAfmtKJIiJ3g9MLjFtsGdZenQU2ArOBHwhskejuaMRwp7nvFVPoMtpeuawRaV7ceEtsHDNAkyzeAYi16kPlXF5HtosCwcvgpOlXn8NjDdiN+Xrpbp9qthZ3CLFfzu6X6DxskRxtX+IegoZe+wOMYrvvHtDK4al36ygpf9R90o0X5Y9JuCwvYzeGksyhsNrLeM770VmKIx4xh7vOD73VgSpLniS9ClYZKcsnDTuNgJznpjqf4LMyd4znN/oQnR+aSmfyx7K1fqikfUu2lCWINn/eywcqWO8fVKpflBbKMJkTdxl5+EVa7UMU72KTXYTBPiSBNXesH4ROVKnVeYZBk20oSYfwcX+QXYpMaSSCQSiUQikaCa8S9Pg4gYgrFSZQAAAABJRU5ErkJggg==">
+                    Profile</div>
+                <div class="message">Messages</div>
+                <div class="history">History</div>
+                <div class="task">Tasks</div>
+                <div class="community">Communities</div>
+                <div class="setting">Settings</div>
+                <div class="support">Support</div>
+                <div class="privacy">Privacy</div>
+                <!-- <a href="https://icons8.com/icon/15265/customer">Customer icon by Icons8</a> -->
+            </div>
+        </div>
+        <div class="header">Header
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #b2a4ff;"></i>
+                <input type="text">
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="project">
+                <h1>Projects</h1>
+                <div class="project-holder">
+                    <div class="my-project">1</div>
+                    <div class="my-project">2</div>
+                    <div class="my-project">3</div>
+                    <div class="my-project">4</div>
+                    <div class="my-project">5</div>
+                    <div class="my-project">6</div>
+                </div>
+
+            </div>
+            <div class="other">
+                <div class="announcement">
+                    <h1>Announcement</h1>
+                </div>
+                <div class="trending">
+                    <h1>Trending</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
