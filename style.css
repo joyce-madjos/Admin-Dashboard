@@ -5,11 +5,11 @@
 :root {
   --header-btn-font: "Inter", sans-serif;
   --regular-font: "Oswald", sans-serif;
-  --bg-color: #B2A4FF;
+  --bg-color: #b2a4ff;
   --text-color: #000000;
-  --button-color: #FFDEB4;
-  --other-color: #FDF7C3;
-  --header-color: #FFB4B4;
+  --button-color: #ffdeb4;
+  --other-color: #fdf7c3;
+  --highlight-color: #ffb4b4;
   /* https://colorhunt.co/palette/b2a4ffffb4b4ffdeb4fdf7c3 */
 }
 
@@ -22,12 +22,29 @@ body {
   font-family: var(--regular-font);
 }
 
-h1{
-    font-family: var(--header-btn-font);
+h1 {
+  font-family: var(--header-btn-font);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+i {
+  color: #b2a4ff;
+}
+
+.icons {
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+.icons > i {
+  color: var(--other-color);
 }
 
 .container {
-  min-height: 100svh;
+  /* min-height: 100svh; */
   display: grid;
   margin: 0;
   padding: 0;
@@ -42,73 +59,152 @@ h1{
 .sidebar {
   background-color: var(--button-color);
   grid-area: sidebar;
+  /* grid-row-end: 3; */
 }
 
-.dashboard{
-    display: grid;
-    letter-spacing: 3px;
-    font-size: 1.5rem;
-    font: bold 700;
-    margin-left: 2rem;
-    row-gap: 1rem;
+.dashboard {
+  display: grid;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  font: bold 700;
+  margin-left: 2rem;
+  row-gap: 1rem;
 }
 
-.labels{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    
-    /* max-height:auto; */
-    /* width: 100%; */
+.labels {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  /* max-height:auto; */
+  /* width: 100%; */
 }
 
-.labels > img{
-    width: 15%;
-    height: auto;
+.labels > img {
+  width: 15%;
+  height: auto;
 }
 
-.header {
+.heading {
   background-color: var(--other-color);
   grid-area: header;
-  font-size: 40px;
+}
+
+header {
+  margin: 1rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.search > input {
+  width: 50%;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin-right: auto;
+}
+
+.right-side {
+  display: flex;
+  margin-right: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.user > p {
+  margin-right: auto;
+}
+
+.user > button {
+  background-color: var(--button-color);
+  padding: 0.5em 1.5em;
+  border-radius: 1rem;
 }
 
 .main-content {
-  /* grid-column-start: 2; */
   background-color: var(--bg-color);
   grid-area: main;
   display: grid;
   grid-template-columns: 5fr 2fr;
+  /* grid-column-start: 2; */
+  /* grid-template-columns: repeat(auto-fit, minmax(30rem,1fr)); */
+}
+
+.project {
+  margin: 0 1rem;
+  grid-column-end: 2;
+  /* width: 700px; */
 }
 
 .project-holder {
   /* width: 100%; */
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  /* gap: 1px; */
-  overflow: auto;
-/* column-gap: 1px; */
+  gap: 1px;
+  overflow: auto; */
+  /* column-gap: 1px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .my-project {
-  display: inline-block;
-  flex-basis: calc(100% / 2);
+  /* display: inline-block; */
+  /* flex-basis: calc(100% / 2); */
   height: auto;
   width: auto;
-  background-color: var(--header-color);
-  border: 2px solid black;
-
+  background-color: var(--highlight-color);
+  border-left: 1rem solid var(--button-color);
+  padding-left: 1rem;
+  border-radius: 1rem;
 }
 
-.other{
-    display: grid;
-    grid-template-rows: 5fr 5fr;
+.other {
+  display: grid;
+  grid-template-rows: 35rem 1fr;
 }
 
-.announcement{
-    /* background-color: aliceblue; */
+.announcement {
+  /* height: 50px; */
 }
 
-.trending{
-    /* background-color:blanchedalmond; */
+.report,
+.feature {
+  background-color: var(--highlight-color);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* width: 100%; */
+}
+
+.report > section {
+  border-bottom: 2px solid var(--other-color);
+}
+
+.trending {
+  /* background-color:blanchedalmond; */
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* justify-content: center; */
+}
+
+.gray-text{
+  color: #290052;
 }
